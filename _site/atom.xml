@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="/whattheflutz/assets/xslt/atom.xslt" ?>
+<?xml-stylesheet type="text/css" href="/whattheflutz/assets/css/atom.css" ?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+	<id>https://miajl.github.io/whattheflutz/</id>
+	<title>What the Flutz</title>
+	<updated>2026-02-15T23:13:50-05:00</updated>
+
+	<subtitle>»Feeling Responsive« is a responsive theme for Jekyll based on the fabulous foundation framework with beautiful typography and a bright color palette.</subtitle>
+
+	
+		
+		<author>
+			
+				<name>miajl</name>
+			
+			
+			
+		</author>
+	
+
+	<link href="https://miajl.github.io/whattheflutz/atom.xml" rel="self" type="application/rss+xml" />
+	<link href="https://miajl.github.io/whattheflutz/" rel="alternate" type="text/html" />
+
+	<generator uri="http://jekyllrb.com" version="4.4.1">Jekyll</generator>
+
+	
+		<entry>
+			<id>https://miajl.github.io/whattheflutz/men's%20figure%20skating/figure%20skating/2026-olympic-menning-index/</id>
+			<title>Was the 2026 Olympics the hardest the men have ever menned?</title>
+			<link href="https://miajl.github.io/whattheflutz/men's%20figure%20skating/figure%20skating/2026-olympic-menning-index/" rel="alternate" type="text/html" title="Was the 2026 Olympics the hardest the men have ever menned?" />
+			<updated>2026-02-15T00:00:00-05:00</updated>
+
+			
+				
+				<author>
+					
+						<name>Phlow</name>
+					
+					
+					
+						<uri>http://phlow.de/</uri>
+					
+				</author>
+			
+			<summary></summary>
+			<content type="html" xml:base="https://miajl.github.io/whattheflutz/men's%20figure%20skating/figure%20skating/2026-olympic-menning-index/">&lt;p&gt;After a relatively clean team competition, the men really delivered on the chaos in the individual olympic event. This got me thinking, is the most chaotic/menningest men’s competition in recent history? Short answer, yes. Long answer see below.&lt;/p&gt;
+
+&lt;h2 id=&quot;what-does-it-mean-to-men-and-how-do-we-measure-it&quot;&gt;What does it mean to men and how do we measure it?&lt;/h2&gt;
+&lt;p&gt;Menning is the phenomenon when the rankings shift greatly between the Short Program and the Free Skate. So we are looking for a way to measure how rankings change between the short and free or between the short and overall ranking. I have come up with two different metrics for this. One is more easy to understand and one is more comprehensive.&lt;/p&gt;
+
+&lt;h3 id=&quot;podium-menning-index-pmi&quot;&gt;Podium Menning Index (PMI)&lt;/h3&gt;
+&lt;p&gt;One way we can look at the level of chaos in a competition is to look at the rankings of the skaters on the podium. If all three podium skaters were in the top three in both the short and long, it indicates a lower chaos competition. If the podium skaters have lower rankings, then it is a higher chaos competition. The Podium Menning Index is calculated by adding the placements of the top three skaters and then subtracting 12. We subtract 12 so that if the top three were the top three for the short and the free, the Podium Menning Index would equal 0. For example in the 2026 Olympics we have $PMI = 5 + 1 + 2 + 6 + 9 + 3 - 12 = 14$ calculated from Mikhail, Yuma and Shun’s rankings.&lt;/p&gt;
+
+&lt;h3 id=&quot;spearman-menning-index-smi&quot;&gt;Spearman Menning Index (SMI)&lt;/h3&gt;
+&lt;p&gt;In order to include all of the skater’s results in a metric, I use the Spearman rank-order correlation. The Spearman rank-order correlation is a measure of the relationship between two rankings. If the two rankings are identical, the Spearman rank-order correlation would be 1. If the two rankings are in reverse order, the Spearman rank-order correlation would be -1. I decided to present my metric as a number from 0 to 100 for easier readability. $SMI = \left(1-\texttt{spearmanr}\left(\text{SP rankings},\text{FS rankings}\right)\right) \times 50$&lt;/p&gt;
+
+&lt;h2 id=&quot;results&quot;&gt;Results&lt;/h2&gt;
+&lt;p&gt;Here are the results of the PMI and SMI at Worlds and the Olympics for the last three quads. For Olympic years I used just the Olympics and not Worlds. There was no worlds in 2020 due to covid. My code is &lt;a href=&quot;https://github.com/miajl/wtf_stats/tree/main/menning-calc&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;div class=&quot;row t60&quot;&gt;
+    &lt;div class=&quot;medium-6 columns b30&quot;&gt;
+        &lt;img src=&quot;/images/2026-02-15-menning-index/PMI.png&quot; alt=&quot;PMI&quot; /&gt;
+    &lt;/div&gt;&lt;!-- /.medium-6.columns --&gt;
+
+    &lt;div class=&quot;medium-6 columns b30&quot;&gt;
+        &lt;img src=&quot;/images/2026-02-15-menning-index/SMI.png&quot; alt=&quot;SMI&quot; /&gt;
+    &lt;/div&gt;&lt;!-- /.medium-6.columns --&gt;
+&lt;/div&gt;
+&lt;!-- /.row --&gt;
+
+&lt;h3 id=&quot;smi-sanity-check&quot;&gt;SMI Sanity Check&lt;/h3&gt;
+&lt;p&gt;To check that the metric is functioning how I wanted it to, I looked at the results from the next highest SMI (2015) and the lowest SMI (2023) to see if it matches my expectations. For the high SMI year 2015, over 50% of the skaters had a rank change of more than 3 between programs while in the low SMI year 2023 only 25% of the skaters had a rank change of more than 3. This matches with my expctations for high and low SMI years.&lt;/p&gt;
+
+&lt;h2 id=&quot;conclusions&quot;&gt;Conclusions&lt;/h2&gt;
+&lt;p&gt;Both the Podium Menning Index and the Spearman Menning Index indicate that the 2026 Olympics had higher than usual menning. We had the highest SMI of the three quads and the PMI was only beaten by 2024 where Adam Siao Him Fa jumped from 19th to 3rd place. Overall I think both menning indices are useful and I’m excited to apply them to the other disciplines. Are the pair’s menning or are the men actually pairsing?&lt;/p&gt;
+</content>
+
+			
+				<category term="Men&apos;s Figure Skating" />
+			
+				<category term="Figure Skating" />
+			
+			
+
+			<published>2026-02-15T00:00:00-05:00</published>
+		</entry>
+	
+</feed>

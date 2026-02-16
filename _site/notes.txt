@@ -1,0 +1,4 @@
+(later) add posts by category
+search
+comments?
+contact?
